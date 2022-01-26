@@ -1,0 +1,14 @@
+.poster {
+  height: 240px;
+  width: 160px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #323232;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s;
+  }
+}

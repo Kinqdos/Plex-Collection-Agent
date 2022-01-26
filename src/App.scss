@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  color: #eee;
+}
+
+html, body, #root {
+  height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+
+  background: #2c3743;
+  font-family: Open Sans Regular, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+}
+
+#main-content {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  height: calc(100% - 64px); //Minus Top bar height
+}
+
+input {
+  outline: none;
+  border: none;
+
+  background: #5e5e5e;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.dialog-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.dialog {
+  //Border Radius
+  border-radius: 10px;
+  overflow: hidden;
+  //Size
+  max-width: 800px;
+  width: 800px;
+  height: 550px;
+  //Children handling
+  display: flex;
+  flex-direction: column;
+  //Style
+  background: #222222;
+}
+
+.dialog-header {
+  @extend .dialog-bar;
+  position: relative; //For close icon
+
+  h4 {
+    font-size: 20px;
+  }
+
+  span {
+    color: #999;
+  }
+
+  svg { //Close icon
+    position: absolute;
+    top: 15px; //Add padding
+    right: 15px; //Add padding
+    cursor: pointer;
+    height: 18px;
+    fill: #585858;
+
+    &:hover {
+      fill: #8f8f8f;
+    }
+  }
+}
+
+.dialog-bar {
+  background: #323232;
+  padding: 15px;
+}
+
+.btn {
+  border: 0;
+  border-radius: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71428571;
+  margin-bottom: 0;
+  padding: 6px 16px;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.btn-default {
+  @extend .btn;
+  background-color: hsla(0,0%,100%,.25);
+  border-color: #ccc;
+  color: #fff;
+  -webkit-transition: background-color .1s;
+  transition: background-color .1s;
+}
+
+.btn-primary {
+  @extend .btn;
+  background-color: #cc7b19;
+  border-color: #b56d16;
+  color: #fff;
+  -webkit-transition: background-color .1s;
+  transition: background-color .1s;
+}
+
+.svgIcon:hover {
+  color: #fff;
+}
+
+/******************* SWAL2-Additions *******************/
+.swal2-title, .swal2-html-container {
+  color: #eee!important;
+}

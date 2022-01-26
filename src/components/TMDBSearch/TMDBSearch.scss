@@ -1,0 +1,26 @@
+@use "SearchItem";
+
+#search-result-wrapper {
+  flex-grow: 1;
+  overflow: auto;
+  background: #202020;
+}
+
+#search-result-prompt {
+  text-align: center;
+  font-size: 24px;
+  margin: 10px;
+}
+
+#search-dialog-footer {
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-right: 6px;
+  }
+
+  input {
+    flex-grow: 1;
+  }
+}

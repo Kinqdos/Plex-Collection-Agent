@@ -1,0 +1,59 @@
+{
+  "name": "plex-collection-agent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/App.js",
+  "author": "Kinqdos",
+  "license": "ISC",
+  "homepage": ".",
+  "scripts": {
+    "start-electron": "electron .",
+    "start-react": "react-scripts start",
+    "build-react": "react-scripts build",
+    "build-exe": "react-scripts build && electron-builder"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^14.3.2",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0",
+    "sass": "^1.45.2",
+    "sweetalert2": "^11.3.4"
+  },
+  "devDependencies": {
+    "electron": "^16.0.6",
+    "electron-builder": "^22.14.5"
+  },
+  "build": {
+    "extends": null,
+    "productName": "Plex-Collection-Agent",
+    "appId": "com.kinqdos.plex-collection-agent",
+    "win": {
+      "target": [
+        "zip"
+      ]
+    },
+    "files": [
+      "./app/*.js",
+      "build",
+      "node_modules"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

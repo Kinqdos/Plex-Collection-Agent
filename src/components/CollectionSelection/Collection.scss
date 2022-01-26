@@ -1,0 +1,33 @@
+.collection {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+
+  * {
+    font-size: 13px;
+  }
+
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  :first-child {
+    margin-bottom: 5px; //Space between poster and text
+  }
+}
+
+.collection-title {
+  padding: 0 4px;
+  max-width: 100%;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.collection-summary {
+  padding: 0 4px;
+  color: hsla(0, 0%, 100%, .45);
+}

@@ -1,0 +1,29 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+
+  margin-bottom: 8px;
+  padding: 0 8px; //Space left and right
+
+  border-radius: 4px;
+  background: rgba(0, 0, 0, .15);
+
+  & > div {
+    display: flex;
+    align-items: center;
+    height: 100%; //Fill bar
+  }
+}
+
+#navbar-caption {
+  padding-bottom: 3px; //Um mit dem Plex Logo zu alignen
+}
+
+#setup-button {
+  cursor: pointer;
+
+  &:hover * {
+    fill: #fff;
+  }
+}

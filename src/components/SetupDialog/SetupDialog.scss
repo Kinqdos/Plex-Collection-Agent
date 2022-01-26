@@ -1,0 +1,23 @@
+#setup-content {
+  flex-grow: 1;
+}
+
+.setup-content-item {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 10px 10px 10px;
+
+  span {
+    color: #999;
+    margin-bottom: 10px;
+  }
+}
+
+#setup-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    margin-left: 10px;
+  }
+}

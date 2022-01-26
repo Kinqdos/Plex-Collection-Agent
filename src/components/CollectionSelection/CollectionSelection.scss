@@ -1,0 +1,17 @@
+@use "Collection";
+
+#collection-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; //float left
+  align-content: flex-start; //Sonst gap zwischen den rows
+
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+#collection-selection-empty {
+  width: 100%;
+  text-align: center;
+}
